@@ -1,4 +1,7 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using EnvDTE;
+using EnvDTE80;
+using Microsoft.VisualStudio.Shell;
+using System.Diagnostics.CodeAnalysis;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,9 +16,10 @@ namespace CodeBuddyExtension
 
 		private void button1_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show(
-				string.Format(System.Globalization.CultureInfo.CurrentUICulture, "Invoked '{0}'", this.ToString()),
-				"CodeBuddy");
+			ThreadHelper.ThrowIfNotOnUIThread();
+			var dte = ServiceProvider.GlobalProvider.GetService(typeof(DTE)) as DTE2;
+
+			MessageBox.Show(dte.Version, "CodeBuddy");
 		}
 	}
 }
