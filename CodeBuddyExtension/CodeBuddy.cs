@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using Microsoft.VisualStudio.Imaging;
+using Microsoft.VisualStudio.Shell;
 using System;
 using System.Runtime.InteropServices;
 
@@ -9,9 +10,10 @@ namespace CodeBuddyExtension
 	{
 		public CodeBuddy() : base(null)
 		{
-			this.Caption = "CodeBuddy";
+			Caption = "CodeBuddy";
+			BitmapImageMoniker = KnownMonikers.JustMyCode;
 
-			this.Content = new CodeBuddyControl();
+			Content = new CodeBuddyControl();
 		}
 	}
 }

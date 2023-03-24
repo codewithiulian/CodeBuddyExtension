@@ -10,7 +10,7 @@
     <Buttons>
       <Button guid="guidCodeBuddyExtensionPackageCmdSet" id="CodeBuddyCommandId" priority="0x0100" type="Button">
         <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
-        <Icon guid="ImageCatalogGuid" id="Save"/>
+        <Icon guid="ImageCatalogGuid" id="JustMyCode"/>
 		<CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
           <ButtonText>Code Buddy</ButtonText>
