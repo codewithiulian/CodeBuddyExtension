@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="CodeBuddyExtension.e8140313-05d8-4859-8feb-8eb6e0235bcf" Version="1.1" Language="en-US" Publisher="Iulian Oana" />
+        <Identity Id="CodeBuddyExtension.e8140313-05d8-4859-8feb-8eb6e0235bcf" Version="1.1.1" Language="en-US" Publisher="Iulian Oana" />
         <DisplayName>CodeBuddy</DisplayName>
         <Description xml:space="preserve">A Simple Visual Studio extension that integrates GPT-3 text-davinci-003 model. It is using the Complete mode with the default settings.
 
