@@ -44,6 +44,7 @@ namespace CodeBuddyExtension
 				apiKey.IsEnabled = false;
 				promptText.IsEnabled = false;
 				submitButton.IsEnabled = false;
+				LoadingLabel.Visibility = Visibility.Visible;
 				using (HttpClient client = new HttpClient())
 				{
 					HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "https://api.openai.com/v1/completions");
@@ -74,6 +75,7 @@ namespace CodeBuddyExtension
 					apiKey.IsEnabled = true;
 					promptText.IsEnabled = true;
 					submitButton.IsEnabled = true;
+					LoadingLabel.Visibility = Visibility.Hidden;
 				}
 			}
 			catch (System.Exception)

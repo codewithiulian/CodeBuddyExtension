@@ -17,8 +17,8 @@
 
 			<Label Foreground="White" HorizontalAlignment="Left">Prompt</Label>
 			<TextBox Name="promptText" Width="{Binding ActualWidth, ElementName=b}"
-				MinLines="48"
-				MaxLines="48"
+				MinLines="10"
+				MaxLines="45"
                 Grid.Column="1"
                 Margin="5"
                 VerticalAlignment="Center"
@@ -26,6 +26,8 @@
 				Foreground="White"
 			    TextWrapping="Wrap" />
 			<Button Foreground="white" Background="#3f3f46" Content="Go" Click="button1_Click" Width="120" Height="24" Name="submitButton"/>
+
+			<Label Visibility="Hidden" Name="LoadingLabel" Foreground="White" HorizontalAlignment="Center">Processing the request, please wait...</Label>
 		</StackPanel>
 	</Grid>
 </UserControl>
