@@ -1,4 +1,4 @@
-# CodeBuddyExtension
+# CodeBuddy
 
 A Simple Visual Studio extension that integrates GPT-3 text-davinci-003 model. It is using the Complete mode with the default settings.
 
