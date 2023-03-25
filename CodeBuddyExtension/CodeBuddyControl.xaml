@@ -11,10 +11,21 @@
              Name="MyToolWindow">
 	<Grid>
 		<StackPanel Orientation="Vertical">
-			<Label Margin="10" Foreground="White" HorizontalAlignment="Center">How can I help?</Label>
-			<PasswordBox x:Name="apiKey" Width="200" Height="18" Background="White"></PasswordBox>
-			<TextBox Name="promptText" Width="200" Height="211" Background="White" Foreground="Black"/>
-			<Button Content="Go" Click="button1_Click" Width="120" Height="24" x:Name="button1"/>
+			<Label FontSize="20" Foreground="White" HorizontalAlignment="Center">How can I help?</Label>
+			<Label Foreground="White" HorizontalAlignment="Left">OpenAI Secret Key</Label>
+			<PasswordBox  Margin="3"  Name="apiKey" Height="18" Background="#1f1f1f" Foreground="White"  Width="{Binding ActualWidth, ElementName=b}"></PasswordBox>
+
+			<Label Foreground="White" HorizontalAlignment="Left">Prompt</Label>
+			<TextBox Name="promptText" Width="{Binding ActualWidth, ElementName=b}"
+				MinLines="48"
+				MaxLines="48"
+                Grid.Column="1"
+                Margin="5"
+                VerticalAlignment="Center"
+				Background="#1f1f1f"
+				Foreground="White"
+			    TextWrapping="Wrap" />
+			<Button Foreground="white" Background="#3f3f46" Content="Go" Click="button1_Click" Width="120" Height="24" Name="submitButton"/>
 		</StackPanel>
 	</Grid>
 </UserControl>

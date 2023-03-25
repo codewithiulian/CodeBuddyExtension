@@ -25,11 +25,27 @@ namespace CodeBuddyExtension
 			//ThreadHelper.ThrowIfNotOnUIThread();
 			//var dte = ServiceProvider.GlobalProvider.GetService(typeof(DTE)) as DTE2;
 
+			// Ensure the API Key is present
+			if (string.IsNullOrEmpty(apiKey.Password))
+			{
+				promptText.Text += "Your OpenAI Secret Key is missing. Please add it before sending a request.";
+				return;
+			}
+
+			// Ensure there is a prompt
+			if (string.IsNullOrEmpty(promptText.Text))
+			{
+				promptText.Text = "Ask a question such as: What is Javascript?";
+				return;
+			}
+
 			try
 			{
+				apiKey.IsEnabled = false;
+				promptText.IsEnabled = false;
+				submitButton.IsEnabled = false;
 				using (HttpClient client = new HttpClient())
 				{
-
 					HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "https://api.openai.com/v1/completions");
 					client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey.Password);
 
@@ -54,6 +70,10 @@ namespace CodeBuddyExtension
 
 						promptText.Text += responseText;
 					}
+
+					apiKey.IsEnabled = true;
+					promptText.IsEnabled = true;
+					submitButton.IsEnabled = true;
 				}
 			}
 			catch (System.Exception)
