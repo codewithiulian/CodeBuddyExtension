@@ -3,7 +3,7 @@
     <Metadata>
         <Identity Id="CodeBuddyExtension.e8140313-05d8-4859-8feb-8eb6e0235bcf" Version="1.0" Language="en-US" Publisher="Iulian Oana" />
         <DisplayName>CodeBuddy</DisplayName>
-        <Description xml:space="preserve">An AI for translating text into code and answering programming dilemmas. Based on GPT-3.5.</Description>
+        <Description xml:space="preserve">A simple Visual Studio extension that integrates GPT-3 text-davinci-003 model. It is using the Complete mode with the default settings.</Description>
         <Icon>Resources\Icon.png</Icon>
     </Metadata>
     <Installation>
