@@ -8,9 +8,10 @@ Create an OpenAI Secret/API Key and paste it into the first field. Ask the quest
 
 Currently works with the dark theme of VS.
 
+![Screenshot](https://user-images.githubusercontent.com/39761148/227710216-0f012995-9dd0-4153-a5b8-970f6e14abd6.png)
+
 Known isuses:
 - Incompatibility with the VS Light theme.
 - Propper form validation missing.
 - Finetune the request the request parameters.
 - API Key saving in the VS memory for later use without having to add it every time you open VS.
-![Screenshot](https://user-images.githubusercontent.com/39761148/227710216-0f012995-9dd0-4153-a5b8-970f6e14abd6.png)
