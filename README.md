@@ -10,5 +10,8 @@ Create an OpenAI Secret/API Key and paste it into the first field. Ask the quest
 
 ![Example](https://user-images.githubusercontent.com/39761148/227711861-0b6f0bb2-7d94-4949-a538-4cc2d27cacf0.png)
 
-Please report any issues in the [Issues tab](https://github.com/codewithiulian/CodeBuddyExtension/issues)
+The bugs/enhancements can be logged in the [Issues tab](https://github.com/codewithiulian/CodeBuddyExtension/issues)
+
 The in-progress improvements can be tracked in the [Projects tab](https://github.com/codewithiulian/CodeBuddyExtension/projects?query=is%3Aopen)
+
+Feel free to star this repo if you found it useful.
