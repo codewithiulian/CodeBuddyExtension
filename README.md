@@ -8,12 +8,7 @@ Install, go to View > Other Windows > CodeBuddy. You may dock it next in the Sol
 
 Create an OpenAI Secret/API Key and paste it into the first field. Ask the question in the second field.
 
-Currently works with the dark theme of VS.
-
 ![Example](https://user-images.githubusercontent.com/39761148/227711861-0b6f0bb2-7d94-4949-a538-4cc2d27cacf0.png)
 
-Known isuses:
-- Incompatibility with the VS Light theme.
-- Propper form validation missing.
-- Finetune the request the request parameters.
-- API Key saving in the VS memory for later use without having to add it every time you open VS.
+Please report any issues in the Issues tab
+The in-progress improvements can be tracked here [Projects](https://github.com/codewithiulian/CodeBuddyExtension/projects?query=is%3Aopen)
