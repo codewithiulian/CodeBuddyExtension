@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeBuddyExtension.Data
+namespace CodeBuddy.Models
 {
-	public class ResponseModel
+	internal class ResponseModel
 	{
 		public string id { get; set; }
 		public int created { get; set; }
