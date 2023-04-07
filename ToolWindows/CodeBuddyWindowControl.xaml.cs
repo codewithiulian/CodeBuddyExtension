@@ -31,7 +31,16 @@ namespace CodeBuddy
 			Error.Text = ""; // clear the error
 			Error.Visibility = Visibility.Hidden;
 
+			promptText.IsEnabled = false;
+			submitButton.IsEnabled = false;
+			Info.Content = "Processing the request, please wait...";
+			Info.Visibility = Visibility.Visible;
+
 			windowModel = await chatService.SendGptRequestAsync(promptText.Text);
+
+			Info.Visibility = Visibility.Hidden;
+			submitButton.IsEnabled = true;
+			promptText.IsEnabled = true;
 
 			if (windowModel.Errors.Any())
 			{
@@ -40,6 +49,10 @@ namespace CodeBuddy
 					Error.Text += error + "  ";
 				}
 				Error.Visibility = Visibility.Visible;
+			}
+			else
+			{
+				promptText.Text += windowModel.Response;
 			}
 		}
 	}

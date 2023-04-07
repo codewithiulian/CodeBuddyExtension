@@ -104,6 +104,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="OpenAI">
+      <Version>1.7.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="ToolWindows\CodeBuddyWindowControl.xaml">

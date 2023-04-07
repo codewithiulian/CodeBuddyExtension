@@ -29,11 +29,9 @@
 			    TextWrapping="Wrap" />
 			<Button Foreground="white" Background="#3f3f46" Content="Send" Click="button1_Click" Width="120" Height="24" Name="submitButton"/>
 
-			<Label Visibility="Hidden" Name="LoadingLabel" Foreground="White" HorizontalAlignment="Center">Processing the request, please wait...</Label>
+			<Label Visibility="Hidden" Name="Info" Foreground="White" HorizontalAlignment="Center" />
 
-			<!--<TextBlock Visibility="Hidden" MaxWidth="300" Name="Error" Foreground="Red" HorizontalAlignment="Center"></TextBlock>-->
-			<TextBlock x:Name="Error" TextWrapping="WrapWithOverflow" Visibility="Hidden" Width="300" HorizontalAlignment="Left" Foreground="Red">
-			</TextBlock>
+			<TextBlock x:Name="Error" TextWrapping="WrapWithOverflow" Visibility="Hidden" Width="300" HorizontalAlignment="Left" Foreground="Red" />
 		</StackPanel>
 	</Grid>
 </UserControl>
