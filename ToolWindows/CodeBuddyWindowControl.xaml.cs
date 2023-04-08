@@ -33,7 +33,7 @@ namespace CodeBuddy
 
 			promptText.IsEnabled = false;
 			submitButton.IsEnabled = false;
-			Info.Content = "Processing the request, please wait...";
+			Info.Text = "Processing the request, please wait...";
 			Info.Visibility = Visibility.Visible;
 
 			windowModel = await chatService.SendGptRequestAsync(promptText.Text);
@@ -52,7 +52,7 @@ namespace CodeBuddy
 			}
 			else
 			{
-				promptText.Text += windowModel.Response;
+				responseText.Text = windowModel.Response;
 			}
 		}
 	}

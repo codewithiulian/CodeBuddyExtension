@@ -49,6 +49,12 @@ namespace CodeBuddy.Services
 			{
 				var result = await api.Completions.CreateCompletionAsync(new CompletionRequest(prompt, model: Model.DavinciText, max_tokens: 2048));
 				toReturn.Response = result.ToString(); // Gets the first Completion if not null
+
+				// Remove the initial new lines if present
+				if (toReturn.Response.StartsWith("\n\n"))
+				{
+					toReturn.Response = toReturn.Response.Remove(0, 2);
+				}
 			}
 			catch (AuthenticationException ex)
 			{
