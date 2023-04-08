@@ -17,16 +17,16 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="30" /> <!--Title-->
 			<RowDefinition Height="*" /> <!--Responses-->
-			<RowDefinition Height="160" /> <!--Prompt--> 
-			<RowDefinition Height="30" /> <!--Info--> 
+			<RowDefinition Height="170" /> <!--Prompt--> 
+			<RowDefinition Height="40" /> <!--Info--> 
 		</Grid.RowDefinitions>
 
 		<TextBlock Grid.Row="0" Text="How can I help?" FontSize="20" Margin="5,0,0,0" Foreground="White" />
 
 		<TextBox Grid.Row="1" Name="responseText" Width="{Binding ActualWidth, ElementName=b}"
             VerticalAlignment="Center"
-			MinLines="32"
-			MaxLines="32"
+			MinLines="30"
+			MaxLines="30"
 			Background="#1f1f1f"
 			Foreground="White"
 			AcceptsReturn="True"
@@ -52,7 +52,7 @@
 			<Button Foreground="white" Background="#3f3f46" Content="Send" Click="button1_Click" Width="120" Height="24" Name="submitButton"/>
 		</StackPanel>
 		
-		<TextBlock Margin="5" Grid.Row="3" x:Name="Info" TextWrapping="WrapWithOverflow" Visibility="Hidden" HorizontalAlignment="Center" Foreground="White" />
-		<TextBlock Margin="5" Grid.Row="3" x:Name="Error" TextWrapping="WrapWithOverflow" Visibility="Hidden" HorizontalAlignment="Left" Foreground="Red" />
+		<TextBlock Margin="5,0,5,0" Grid.Row="3" x:Name="Info" TextWrapping="WrapWithOverflow" Visibility="Hidden" HorizontalAlignment="Center" Foreground="White" />
+		<TextBlock Margin="5,0,5,0" Grid.Row="3" x:Name="Error" TextWrapping="WrapWithOverflow" Visibility="Hidden" HorizontalAlignment="Left" Foreground="Red" />
 	</Grid>
 </UserControl>
