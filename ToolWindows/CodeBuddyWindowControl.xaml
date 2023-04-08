@@ -25,8 +25,8 @@
 
 		<TextBox Grid.Row="1" Name="responseText" Width="{Binding ActualWidth, ElementName=b}"
             VerticalAlignment="Center"
-			MinLines="30"
-			MaxLines="30"
+			MinLines="25"
+			MaxLines="25"
 			Background="#1f1f1f"
 			Foreground="White"
 			AcceptsReturn="True"

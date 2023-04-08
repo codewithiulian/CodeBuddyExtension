@@ -34,6 +34,7 @@ namespace CodeBuddy.Services
             if (string.IsNullOrEmpty(options.OpenAiApiKey))
             {
                 toReturn.Errors.Add("Your OpenAI API key is missing. To add it go to Tools > Options > Code Buddy.");
+				return toReturn;
             }
 
 			if (string.IsNullOrEmpty(prompt))
