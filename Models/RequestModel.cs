@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeBuddyExtension.Data
+namespace CodeBuddy.Models
 {
-	public class RequestModel
+	internal class RequestModel
 	{
 		public string model { get; set; }
 		public string prompt { get; set; }

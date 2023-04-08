@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="CodeBuddy.CodeBuddyWindowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:imaging="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.Imaging"
+             xmlns:theming="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Imaging"
+             xmlns:util="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Utilities"
+             xmlns:catalog="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.ImageCatalog"
+             xmlns:toolkit="clr-namespace:Community.VisualStudio.Toolkit;assembly=Community.VisualStudio.Toolkit"
+             toolkit:Themes.UseVsTheme="True"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             Name="MyToolWindow">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30" /> <!--Title-->
+			<RowDefinition Height="*" /> <!--Responses-->
+			<RowDefinition Height="170" /> <!--Prompt--> 
+			<RowDefinition Height="40" /> <!--Info--> 
+		</Grid.RowDefinitions>
+
+		<TextBlock Grid.Row="0" Text="How can I help?" FontSize="20" Margin="5,0,0,0" Foreground="White" />
+
+		<TextBox Grid.Row="1" Name="responseText" Width="{Binding ActualWidth, ElementName=b}"
+            VerticalAlignment="Center"
+			MinLines="30"
+			MaxLines="30"
+			Background="#1f1f1f"
+			Foreground="White"
+			AcceptsReturn="True"
+			AcceptsTab="True"
+			Margin="5"
+			IsReadOnly="True"
+			VerticalScrollBarVisibility="Visible"
+			TextWrapping="Wrap" />
+
+		<StackPanel Grid.Row="2" Orientation="Vertical">
+			<Label Foreground="White" HorizontalAlignment="Left">Prompt</Label>
+			<TextBox Name="promptText" Width="{Binding ActualWidth, ElementName=b}"
+				MinLines="5"
+				MaxLines="5"
+				VerticalAlignment="Center"
+				Background="#1f1f1f"
+				Foreground="White"
+				AcceptsReturn="True"
+				AcceptsTab="True"
+				Margin="5"
+				VerticalScrollBarVisibility="Visible"
+				TextWrapping="Wrap" />
+			<Button Foreground="white" Background="#3f3f46" Content="Send" Click="button1_Click" Width="120" Height="24" Name="submitButton"/>
+		</StackPanel>
+		
+		<TextBlock Margin="5,0,5,0" Grid.Row="3" x:Name="Info" TextWrapping="WrapWithOverflow" Visibility="Hidden" HorizontalAlignment="Center" Foreground="White" />
+		<TextBlock Margin="5,0,5,0" Grid.Row="3" x:Name="Error" TextWrapping="WrapWithOverflow" Visibility="Hidden" HorizontalAlignment="Left" Foreground="Red" />
+	</Grid>
+</UserControl>
