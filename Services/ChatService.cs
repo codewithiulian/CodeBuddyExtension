@@ -5,6 +5,7 @@ using OpenAI_API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,14 @@ namespace CodeBuddy.Services
 				// Nullify the api and chat services so they can be reinitialized with a valid key.
 				api = null;
 				toReturn.Errors.Add("Your OpenAI API Key is invalid. Either generate a new one or ensure it is correct. This can be generated at platform.openai.com/account/api-keys. Then go to Tools > Options > Code Buddy and paste it.");
+			}
+			catch (HttpRequestException ex)
+			{
+				toReturn.Errors.Add("There was an error processing your request. Make sure you are connected to the interet.");
+			}
+			catch (Exception e)
+			{
+				toReturn.Errors.Add("There was an error processing your request. Reload the environment and try again.");
 			}
 
 			return toReturn;
